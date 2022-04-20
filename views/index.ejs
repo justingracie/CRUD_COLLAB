@@ -14,10 +14,10 @@
         <h3><%= menuItem.item %></h3>
     </div>
     <div>
-        <img class="card-image" src="<%= menuItem.image%>" alt="<%= menuItem.item %>" />
+       <a href="/menu/<%=i%>"> <img class="card-image" src="<%= menuItem.image%>" alt="<%= menuItem.item %>" /></a>
     </div>
     <div>
-        <h4><%=menuItem.price %></h4>
+        <h4>$<%=menuItem.price %></h4>
     </div>
     <%} %>
 </body>
