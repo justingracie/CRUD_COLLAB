@@ -20,6 +20,7 @@
   "homepage": "https://github.com/justingracie/CRUD_COLLAB#readme",
   "dependencies": {
     "ejs": "^3.1.7",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "method-override": "^3.0.0"
   }
 }

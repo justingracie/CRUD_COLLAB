@@ -9,6 +9,13 @@
         <h3><%= menuItem.item %></h3>
     </div>
     <div>
+        <form method="post" action="/menu/<%=i%>?_method=DELETE">
+            <input type="submit" value="Delete Menu Item">
+        </form>
+
+
+    </div>
+    <div>
        <a href="/menu/<%=i%>"> <img class="card-image" src="<%= menuItem.image%>" alt="<%= menuItem.item %>" /></a>
     </div>
     <div>
