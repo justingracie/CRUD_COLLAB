@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs',{pageName : "edit page"}) %>
+<body>
+    
+    <h1>Edit Page</h1>
+    <div>
+        <form method="post" action="/menu/<%=id%>?_method=PUT">
+        <div>
+            <label>Menu Item</label>
+            <input type="text" name="item" value="<%=menu.item%>"/>
+        </div>
+        <div>
+            <label>Menu Image</label>
+            <input type="img" name="img" value="<%=menu.image%>"/>
+        </div>
+        <div>
+            <label>Menu Price</label>
+            <input type="number" name="price" value="<%=menu.price%>"/>
+        </div>
+        <input type="submit" value="Edit Menu Item: <%= menu.item%>"/>
+        </form>
+    </div>
+</body>
+</html>
