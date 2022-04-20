@@ -4,7 +4,9 @@ const express = require('express');
 const app = express();
 app.set('view engine', 'ejs');
 const PORT = 4000;
-let food;
+app.use(express.urlencoded({extended: false}));
+
+
 
 // =====================
 //    ROUTES
@@ -15,6 +17,21 @@ let food;
 app.get('/menu', (req,res)=> {
     const context = {menu: menu}
     res.render('index.ejs', context);
+})
+
+//New Item Route---->
+
+app.get('/menu/new', (req,res) =>{
+    res.render('new.ejs');
+})
+
+
+// Post a new Input ----->
+
+app.post('/menu', (req, res) =>{
+    let newItem = req.body
+    menu.unshift(req.body);
+    res.redirect('/menu');
 })
 
 //Show Route ----->
