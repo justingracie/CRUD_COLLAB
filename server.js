@@ -29,7 +29,7 @@ app.get('/menu/new', (req,res) =>{
 
 //Delete/Destroy Route ---->
 
-app.delete('menu/:id', (req, res) =>{
+app.delete('/menu/:id', (req, res) =>{
     const id = req.params.id
     menu.splice(id, 1);
     res.redirect('/menu');
@@ -37,7 +37,7 @@ app.delete('menu/:id', (req, res) =>{
 
 // Post a new Input ----->
 
-app.post('/menu', (req, res) =>{
+app.post('/menu/new', (req, res) =>{
     //let newItem = req.body
     menu.unshift(req.body);
     res.redirect('/menu');
