@@ -6,7 +6,7 @@ app.set('view engine', 'ejs');
 const PORT = 4000;
 app.use(express.urlencoded({extended: false}));
 
-
+app.use(express.static('public'))
 
 // =====================
 //    ROUTES
@@ -29,7 +29,7 @@ app.get('/menu/new', (req,res) =>{
 // Post a new Input ----->
 
 app.post('/menu', (req, res) =>{
-    let newItem = req.body
+    //let newItem = req.body
     menu.unshift(req.body);
     res.redirect('/menu');
 })
